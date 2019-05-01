@@ -1,0 +1,6 @@
+.sidebar{
+    float: left;
+    padding: 0;
+    margin: 5px;
+    margin-left: -100px
+}

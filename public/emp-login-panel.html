@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login panel</title>
+<!--    <link rel="stylesheet" href="box.css">-->
+   <style>
+       @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+body
+{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+    text-align: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #060c21;
+	font-family: 'Poppins', sans-serif;
+}
+.container
+{
+	position: relative;
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	grid-template-rows: auto;
+	grid-gap: 0 40px;
+}
+.container .box
+{
+	position: relative;
+	height: 400px;
+	background: #060c21;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #000;
+}
+.container .box:before
+{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	transform: skew(2deg,2deg);
+	z-index: -1;
+}
+.container1
+{
+	position: relative;
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	grid-template-rows: auto;
+	grid-gap: 0 40px;
+}
+.container1 .box1
+{
+	position: relative;
+	height: 400px;
+	background: #060c21;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #000;
+}
+.container1 .box1:before
+{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	transform: skew(2deg,2deg);
+	z-index: -1;
+}
+
+.container .box:nth-child(1):before
+{
+	background: linear-gradient(315deg,#ff0057,#e64a19);
+}
+.container .box:nth-child(2):before
+{
+	background: linear-gradient(315deg,#89ff00,#00bcd4)	
+}
+.container .box:nth-child(3):before
+{
+	background: linear-gradient(315deg,#e91e63,#5d02ff)
+}
+.container .box:nth-child(4):before
+{
+	background: linear-gradient(315deg,#ff0000,#ffc107)
+}
+.container1 .box1:nth-child(1):before
+{
+	background: linear-gradient(315deg,#ff0057,#e64a19);
+}
+.container1 .box1:nth-child(2):before
+{
+	background: linear-gradient(315deg,#89ff00,#00bcd4)	
+}
+.container1 .box1:nth-child(3):before
+{
+	background: linear-gradient(315deg,#e91e63,#5d02ff)
+}
+.container1 .box1:nth-child(4):before
+{
+	background: linear-gradient(315deg,#ff0000,#ffc107)
+}
+
+.container .box:after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255,255,255,0.05);
+	pointer-events: none;
+}
+.content
+{
+	position: relative;
+	padding: 20px;
+	transform: translateY(40px);
+}
+.box .content h2
+{
+	position: relative;
+    margin-left: 40px;
+	top: -60px;
+	right: 10px;
+	margin: 0;
+	padding: 0;
+	font-size: 3em;
+	color: rgba(255,255,255,.9);
+	transition: 0.5s;
+}
+.box:hover .content h2
+{
+	top: -150px;
+}
+.box .content h3
+{
+	margin: 0 0 10px;
+	padding: 0;
+	font-size: 24px;
+	font-weight: 500;
+	color: #fff;
+}
+.box .content p
+{
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-size: 16px;
+}
+.box .content a
+{
+	position: relative;
+	margin: 20px 0 0;
+	padding: 10px 20px;
+	text-decoration: none;
+	border: 1px solid #fff;
+	display: inline-block;
+	color: #fff;
+	transition: 0.5s;
+	transform: translateY(-40px);
+	opacity: 0;
+	visibility: hidden;
+}
+.box:hover .content a
+{
+	transform: translateY(0);
+	opacity: 1;
+	visibility: visible;
+}
+.box .content a:hover
+{
+	color: #000;
+	background: #fff;
+}.container1 .box1:after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255,255,255,0.05);
+	pointer-events: none;
+}
+.content1
+{
+	position: relative;
+	padding: 20px;
+	transform: translateY(40px);
+}
+.box1 .content1 h2
+{
+	position: absolute;
+	top: -60px;
+	right: 20px;
+	margin: 0;
+	padding: 0;
+	font-size: 3em;
+	color: rgba(255,255,255,.9);
+	transition: 0.5s;
+}
+.box1:hover .content1 h2
+{
+	top: -150px;
+}
+.box1 .content1 h3
+{
+	margin: 0 0 10px;
+	padding: 0;
+	font-size: 24px;
+	font-weight: 500;
+	color: #fff;
+}
+.box1 .content1 p
+{
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-size: 16px;
+}
+.box1 .content1 a
+{
+	position: relative;
+	margin: 20px 0 0;
+	padding: 10px 20px;
+	text-decoration: none;
+	border: 1px solid #fff;
+	display: inline-block;
+	color: #fff;
+	transition: 0.5s;
+	transform: translateY(-40px);
+	opacity: 0;
+	visibility: hidden;
+}
+.box1:hover .content1 a
+{
+	transform: translateY(0);
+	opacity: 1;
+	visibility: visible;
+}
+.box1 .content1 a:hover
+{
+	color: #000;
+	background: #fff;
+}
+    </style>
+    
+</head>
+<body>
+  <div class="container">
+	<div class="box">
+		<div class="content">
+			<h2>COMPUTERS</h2>
+			<h3>WELCOME</h3>
+            <a href="comp-login.html">Login</a>
+		</div>
+	</div>
+	<div class="box">
+		<div class="content">
+			<h2>PHYSICS</h2>
+			<h3>WELCOME</h3>
+			
+			<a href="phy-login.html">Login</a>
+		</div>
+	</div>
+	<div class="box">
+		<div class="content">
+			<h2>ENGLISH</h2>
+			<h3>WELCOME</h3>
+			
+			<a href="eng-login.html">Login</a>
+		</div>
+	</div>
+	<div class="box">
+		<div class="content">
+            <h2>COMMERCE</h2>
+			<h3>WELCOME</h3>
+			<a href="comm-login.html">Login</a>
+		</div>
+	</div>
+</div>
+              <div class="container1">
+	<div class="box1">
+		<div class="content1">
+			<h2>MBA</h2>
+			<h3>WELCOME</h3>
+			<a href="mba-login.html">Login</a>
+		</div>
+	</div>
+	<div class="box1">
+		<div class="content1">
+			<h2>CHEMISTRY</h2>
+			<h3>WELCOME</h3>
+			<a href="chem-login.html">Login</a>
+		</div>
+	</div>
+	<div class="box1">
+		<div class="content1">
+			<h2>MATHS</h2>
+			<h3>WELCOME</h3>
+			<a href="math-login.html">Login</a>
+		</div>
+	</div>
+<!--
+	<div class="box1">
+		<div class="content1">
+			<h2>08</h2>
+			<h3>Service Four</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+			<a href="#">Read More</a>
+		</div>
+	</div>
+-->
+</div>         
+</body>
+</html>

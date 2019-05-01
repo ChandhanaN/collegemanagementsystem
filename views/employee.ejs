@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<title>WELCOME EMPLOYEE</title>
+	<style>
+.navigation {
+	  width: 300px;
+	  box-sizing: border-box;
+	  box-shadow:0 5px 15px rgba(0,0,0,.9);
+	  /* height: 600px; */
+}
+.mainmenu, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mainmenu a {
+  display: block;
+background-color: blueviolet;
+  text-decoration: none;
+  padding: 10px;
+  color:whitesmoke;
+  font-weight: bolder;
+  font-size: 2em;
+}
+.mainmenu a:hover {
+	background-color:violet;
+	color: black;
+}
+.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 300px;
+}
+.submenu a {
+  background-color:teal;
+}
+.submenu a:hover {
+  background-color:turquoise;
+}
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+.head{
+	height: 80px;
+	background-color: navy;
+	margin-top: -20px;
+	color: white;
+	box-sizing: border-box;
+	  box-shadow:0 5px 15px rgba(0,0,0,.9);
+}
+.head h2{
+	padding: 10px;
+}
+button{
+	float: right;
+	margin-top: -33px;
+	margin-right: 20px;
+}
+body{
+	background: url('./images/adv.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 600px;
+	overflow: hidden;
+	margin:0 auto;
+}
+	</style>
+</head>
+<body>
+	<div class="head">
+		<h2>WELCOME EMPLOYEE</h2>
+		<button class="btn btn-danger">SIGN-OUT</button>
+		<button class="btn btn-success">CHANGE PASSWORD</button>
+	</div>
+		<nav class="navigation">
+				<ul class="mainmenu">
+						<li><a href="/add_comp_prof">ADD PROFILE</a></li>
+				  <li><a href="/view_prof">VIEW PROFILE</a></li>
+				  <li><a href="">ADD INTERNALS</a>
+					<ul class="submenu">
+					  <li><a href="">SEMESTER I</a></li>
+					  <li><a href="">SEMESTER II</a></li>
+					  <li><a href="">SEMESTER III</a></li>
+					  <li><a href="">SEMESTER IV</a></li>
+					</ul>
+				  </li>
+				  <li><a href="">ADD EXTERNALS</a>
+					<ul class="submenu">
+					  <li><a href="">SEMESTER I</a></li>
+					  <li><a href="">SEMESTER II</a></li>
+					  <li><a href="">SEMESTER III</a></li>
+					  <li><a href="">SEMESTER IV</a></li>
+					</ul>
+				  </li>
+				  <li><a href="">ADD EVENTS</a></li>
+				</ul>
+			  </nav>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<script>
+	</script>
+
+</body>
+
+</html>

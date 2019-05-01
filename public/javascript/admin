@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+	<title>Minimum Bootstrap HTML Skeleton</title>
+</head>
+
+<body>
+    <div class="container">
+	<div class="row">
+	    <div class="header">
+	    
+      <%= typeof msg != 'undefined'
+ ? msg:''; %>
+	    <h2>WELCOME ADMIN</h2>
+	    
+	    <img src="final-avatar.png" alt="default-avatar">
+          
+            	    <button type="button" data-toggle="modal" data-target="#myModal"></button>
+
+	</div>
+		</div>
+	<div class="sidebar">
+	    <nav>
+	        <ul>
+               <li><button type="button" data-toggle="modal" data-target="#myModel"><i class="fa fa-user-plus" aria-hidden="true">&nbsp;&nbsp;ADD EMPLOYE</i></button></li>
+               <li><button><i class="fa fa-pencil-square" aria-hidden="true"></i>&nbsp;&nbsp;UPDATE EMPLOYE</button></li>                
+                <li><button><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;VIEW EMPLOYE</button></li>
+                <li><button class="badge"><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;&nbsp;NOTIFICATIONS</button></li>
+                <li><button><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;&nbsp;MESSAGE TO STAFF</button></li>
+                <li><button><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;ADD EVENT</button></li>
+	        </ul>
+	    </nav>
+	</div>
+	
+	
+	 <div class="modal fade" id="myModel" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">EMPLOYE DETAILS</h4>
+        </div>
+        <div class="modal-body">
+             <input type="text" placeholder="EMPLOYE NAME"><br>
+             <input type="text" placeholder="EMPLOYE ID"><br>
+             <fieldset>
+                 <legend>GENDER</legend>
+                 <input type="radio"><label for="">MALE</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="radio"><label for="">FEMALE</label>
+             </fieldset><br>
+             <label for="">DEPARTMENT</label>&nbsp;&nbsp;&nbsp;&nbsp;
+             <select name="" id="">
+                 <option value="">MCA</option>
+                 <option value="">MSc Computers</option>
+                 <option value="">MSc Physics</option>
+                 <option value="">MBA</option>
+                 <option value="">MSc Chemistry</option>
+                 <option value="">MCom Commerce</option>
+                 <option value="">MA English</option>
+                 <option value="">MSc Maths</option>
+             </select>
+             <br>
+             <fieldset>
+                 <legend>EDUCATION</legend>
+                 <input type="checkbox"><label for="">MSc</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="checkbox"><label for="">MCA</label>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="checkbox"><label for="">MTech</label>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="checkbox"><label for="">MPhil</label>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="checkbox"><label for="">PhD</label>
+             </fieldset>
+             <br>
+             <input type="text" placeholder="EXPERIENCE(years)">
+             <br>
+             <input type="text" placeholder="PHONE NUMBER">
+             <textarea name="" id="" cols="70" rows="3"></textarea>
+             
+             <br><br>
+            <button type="reset" class="btn btn-primary">RESET</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+        </div>
+        <div class="modal-footer">
+         
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+	 <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+         <form action="/myuploads" method="POST" enctype="multipart/form-data" >
+     
+    <div class="file-field input-field">
+      <div class="btn grey">
+        <span>File</span>
+        <input type="file" name="mypic">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+    <button type="submit">Submit</button>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+
+
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

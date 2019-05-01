@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<title>Minimum Bootstrap HTML Skeleton</title>
+	<style>
+		body{
+			background: url('./images/mug.jpg');
+			background-position: center;
+			background-size: cover;
+			/* font-family: 'Courier New', Courier, monospace; */
+			height: 100vh;
+		}
+		.head{
+			height: 80px;
+			background-color:darkmagenta;
+			justify-content: center;
+			align-content: center;
+		}
+		.card-box{
+			perspective: 500px;
+			margin: 15px;
+
+		}
+		.card{
+			position: relative;
+			width: 100px;
+			height: 100px;
+			background: #fff;
+			transform-style: preserve-3d;
+			transition: .5s ease;
+			box-shadow: 0 30px 30px rgba(0,0,0,.5);
+		}
+		.add{
+			background:  	#ca9cf2;
+		}
+		.update{
+			background:#ff8949;
+		}
+		.delete{
+			background: #B2D8B2;
+		}
+		.events{
+			background: #ffc0cb;
+		}
+		.notif{
+			background: #7F7FFF;
+		}
+		.card-front, .card-back{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100px;
+			height: 100px;
+			color:black;
+			backface-visibility: hidden;
+		}
+		.card-front{
+			font-size: 3em;
+			justify-content: center;
+			text-align: center;
+			display: flex;
+			align-items: center;
+		}
+		.card-back{
+			font-size: 1.2em;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+		.card-back .but{
+			 background: transparent;
+			 height: 60px;
+			 justify-content: flex-start;
+			 border: none;
+			 font-weight:bolder;
+		}
+		.card-box:hover .card{
+			transform: rotateY(180deg);
+		}
+		.card-back{
+			transform: rotateY(180deg);
+		}
+		.head h1{
+			font-weight: bolder;
+			color: white;
+			/* margin-top: 20px; */
+		}
+		.head button{
+			float: right;
+			margin-top: -30px;
+			height: 40px;
+			font-weight: bolder;
+			font-size: 1.5em;
+		}
+		.ademp h1{
+			font-weight: bolder;
+		}
+		.ademp{
+			height: 200px;
+			width: 1100px;
+			background: #ff8949;
+		  position: absolute;
+			margin-top: -500px;
+		  margin-left: 200px;
+			}
+			.ademp UL{
+					display: flex;
+					/* padding: 10px; */
+					/* margin: 20px; */
+			}
+			.ademp li{
+					margin: 10px;
+					list-style: none;
+			}
+			.ademp a{
+					color:teal;
+					font-weight: bolder;
+					font-size: 2em;
+					text-decoration: none;
+			}
+		</style>
+
+</head>
+
+<body>
+    <div class="head">
+		<h1>WELCOME ADMIN</h1>
+		<button class="btn btn-primary">LOGOUT</button>
+	</div>
+	<div class="card-box">
+		<div class="card add">
+			<div class="card-front"><i class="fa fa-plus-square" aria-hidden="true"></i>
+			</div>
+			<div class="card-back"><button class="but"></button>ADD EMPLOYEE</button></div>
+		</div>
+	</div>
+	<div class="card-box ">
+		<div class="card update">
+			<div class="card-front"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+			</div>
+			<div class="card-back"><button class="but">UPDATE EMPLOYEE</button></div>
+		</div>
+	</div>
+	<div class="card-box">
+		<div class="card delete">
+			<div class="card-front"><i class="fa fa-trash" aria-hidden="true"></i>
+			</div>
+			<div class="card-back"><button class="but">DELETE EMPLOYEE</button></div>
+		</div>
+	</div><div class="card-box">
+		<div class="card events">
+			<div class="card-front"><i class="fa fa-calendar" aria-hidden="true"></i>
+			</div>
+			<div class="card-back"><button class="but">ADD EVENT</button></div>
+		</div>
+	</div>
+</div><div class="card-box">
+		<div class="card notif">
+			<div class="card-front"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+			</div>
+			<div class="card-back"><button class="but">NOTIF</button></div>
+		</div>
+	</div>
+	<div class="ademp">
+				<h1>SELECT DEPARTMENT</h1>
+				<ul>
+					<li><a href="adding-computer-emp.html">COMPUTERS</a></li>
+					<li><a href="adding-mba-emp.html">MBA</a></li>
+					<li><a href="adding-emp-phy.html">PHYSICS</a></li>
+					<li><a href="add-che-emp.html">CHEMISTRY</a></li>
+					<li><a href="add-commerce-emp.html">COMMERCE</a></li>
+					<li><a href="adding-eng-emp.html">ENGLISH</a></li>
+					<li><a href="adding-maths-emp.html">MATHS</a></li>
+				</ul>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<script>
+	</script>
+
+</body>
+
+</html>

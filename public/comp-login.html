@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width:100% ;
+            /* background: url('./images/Ink.mp4'); */
+            height: 100vh;
+            color: blue;
+        }
+        .login-form{
+            position: absolute;
+            top: 50%;
+            background: transparent;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 300px;
+            border-radius: 20px;
+            padding: 60px, 40px;
+            /* background: rgba(255,255,255, 1); */
+            box-shadow: 0 15px 20px rgba(0,0,0, .9);
+        }
+        .login-form h2{
+            margin: 0 0 40px;
+            padding: 0;
+            text-align: center;
+
+        }
+        .login-form .form-input{
+            position: relative;
+            margin: 20px 0;
+        }
+        .login-form .form-input input{
+            outline: none;
+            height: 40px;
+            padding: 10px;
+            box-sizing: border-box;
+            width: 80%;
+            color: cornsilk;
+            margin-left: 25px;
+            border: 1px solid rgba(0,0,0,.5);
+            background: transparent;
+            font-size: 19px;
+        }
+        .login-form .form-input input[type="submit"]{
+            background: #e91e63;
+            color: #fff;
+            border:none;
+            cursor: pointer;
+            text-transform: capitalize;
+        }
+       
+    </style>
+</head>
+<body data-vide-bg="./images/Ink">
+   <form action="/login" method="POST" class="login-form">
+       <h2>Sign In</h2>
+       <div class="form-input">
+           <input type="text" name="email" placeholder="email">
+       </div>
+       <div class="form-input">
+           <input type="text" name="password" placeholder="password">
+
+       </div>
+       <div class="form-input">
+           <input type="submit" value="login">
+       </div>
+   </form>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"
+   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+   crossorigin="anonymous"></script>
+   <script src="./javascript/jquery.vide.js"></script>
+</body>
+</html>

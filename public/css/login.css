@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya:700i');
+body{
+    background: url('../images/stdnt1.gif') no-repeat center;
+    background-position: center;
+     background-size: cover;
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+    align-content: center;
+}
+
+form{
+    top: 60%;    
+    height: 250px;
+    margin: 0 auto;
+    width: 400px;
+    padding: 10px;
+    background-color: rgba(255,255,255, .2);
+}
+
+.container h1{
+    opacity: .9;
+    font-weight: bolder;
+    color: snow;
+    font-size: 3em;
+    border-bottom: 5px solid #15ffa0;  
+}
+
+.container input{
+    background: none;
+    color: white;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-bottom: 3px solid cyan;
+}
+
+.jumbotron{
+    width: 1000px;
+    margin-top: 10px;
+    position: relative;
+    align-content: center;
+    background-color: rgba(255,255,255, .3);
+}
+
+.jumbotron p{
+    font-size: 2.6em;
+    font-weight: bolder;
+    font-family: 'Alegreya', serif;
+    border-bottom: 4px solid #f5b7d4;
+    color: #66fbff; text-shadow: 5px 5px black;
+}
+
+.container button{
+    background: none;
+    color: wheat;
+    font-weight: bolder;
+    text-align: center;
+    float: right;
+}
+
+.container button:hover{
+    color:whitesmoke;
+    border:4px solid blue;
+}
+.container i{
+    color: #014351;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container input::placeholder{
+    color:white;
+}
+
+@media (max-width: 1000px){
+    .jumbotron{
+        width: auto;
+    }
+    
+    .footer{
+        margin-top: auto;
+    }
+}
+
+.footer{
+    height: 100px;
+    margin-top: 50px;
+    background-color: 	#1a405c;
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.footer p{
+   margin-top: auto;
+}
+
+.footer .disc{
+    color:cadetblue;
+}
+
+.footer .puni{
+    font-weight: bolder;
+}

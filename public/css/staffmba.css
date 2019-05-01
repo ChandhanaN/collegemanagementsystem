@@ -1,0 +1,35 @@
+body{
+    font-family:"Tahoma", sans-serif;
+    background:url('') no-repeat;
+    background-position: center;
+    background-size: cover;;
+    color: #fff;
+    
+}
+h1
+{text-align: center;}
+.col {
+    float: left;
+    width: 33.3%;
+    padding: 8px;
+    box-sizing: border-box;
+}.price-box{
+    border: 1px solid #555;
+    margin:0;
+    padding: 0;
+    transition: 0.3s;
+}
+.price-box:hover, .price-box .best{
+    box-shadow: 0 10px 0 #000;
+    font-size: 25px;
+    color: #fff;
+}
+.price-box li{
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+
+
+/* left one image up */

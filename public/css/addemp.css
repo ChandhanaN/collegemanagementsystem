@@ -1,0 +1,39 @@
+body{
+    background:url('../images/emp.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    background: rgb(255,255,255, .6);
+    
+}
+.container .header{
+    height: 150px;
+    border: 2px solid blue;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 2em;
+    
+}
+
+.container img{
+    float: right;
+    margin-top: -50px;
+}
+.container form{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bolder;
+}
+.container form input{
+    border: none;
+    background-color: transparent;
+    height: 35px;
+    width: 300px;
+}
+.container form input:hover{
+    background-color: darkkhaki;
+    box-shadow: 5px 5px 3px gray;
+}

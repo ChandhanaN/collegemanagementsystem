@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+<link rel="stylesheet" href="style.css">
+<title>Adding Profile Info</title>
+<style> 
+    body{
+   background: url('./images/smile.jpg') no-repeat fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    /* border-radius: 2px solid black; */
+    margin: 0 auto;
+}
+.jumbotron{
+    /* height: 600px; */
+    height: 1000px;
+    font-weight: bolder;
+    /* bottom: 50px; */
+    width: 500px;
+    box-sizing: border-box;
+    box-shadow: rgba(0,0,0, 0.5);
+    background: rgba(255,255,255,.8);
+    box-shadow: 0 5px 15px rgba(0,0,0,.9);
+    margin: 0 auto;
+    /* margin-top:50px; */
+}
+h3{
+    /* align-content: center; */
+    text-align: center;
+    margin: 0 auto;
+}
+input{
+    width: 430px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border: 2.5px solid black;
+    border-radius: 10px;
+    font-weight: bolder;
+    /* box-sizing: border-box; */
+    padding: 10px;
+    margin: 10px;
+    /* box-shadow: 0 5px 10px yellow; */
+}
+input:hover{
+    box-sizing: border-box;
+    box-shadow: 0 5px 5px palegreen;
+}
+.btn-primary{
+    float: right;
+}
+
+select{
+    width: 430px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border: 2.5px solid black;
+    border-radius: 10px;
+    font-weight: bolder;
+    margin: 10px;
+}
+option{
+    background: transparent;
+    color: blueviolet;
+    font-weight: bolder;
+}
+textarea{
+    background: transparent;
+    border: none;
+    border: 2.5px solid sienna;
+    border-radius: 20px;
+    font-weight: bolder;
+    width: 430px;
+}
+textarea:hover{
+    font-weight: bolder;
+}
+
+</style>
+</head>
+<body>  
+    <div class="jumbotron">
+       <form action="/add_comp_profile" method="POST">
+        <h3><u>ADD PROFILE</u></h3>
+        <hr>
+        <input type="text" name="first_name"  placeholder="First Name"><br>
+        <input type="text" name="last_name"  placeholder="Last Name"><br>
+        <input type="text" name="father_name" placeholder="Father Name"><br>
+        <!-- <label for="dob" >Data Of Birth:&nbsp;&nbsp;<input type="date" ></label><br> -->
+        <input type="text" name="gender" placeholder="gender"><br>
+        <input type="text"  name="phn_no" placeholder="Phone Number"><br>
+        <input type="text" name="marital_status" placeholder="marital status"><br>
+       <input type="text"  name="empID" placeholder="EMP-ID"><br>
+       <input type="text" name="dept" placeholder="department please"><br>
+        <input type="text"  name="qualification" placeholder="Qualification"><br>
+        <input type="text"  name="experiance" placeholder="Experiance"><br>
+        <label for="Address">Address</label>
+        <textarea name="Address"  id="" cols="60" rows="3"></textarea><br>
+        <button class="btn btn-danger" type="reset">Reset</button>
+        <button class="btn btn-primary" type="submit">Sumbit</button>
+
+    </form>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

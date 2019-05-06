@@ -8,12 +8,15 @@ const path = require('path');
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
-const config = require('../strategies/jsonstrategy');
 const Profile = require('../models/Computer_profile');
+const Student = require('../models/Std_comp');
+const Sem1 = require('../models/Cs-Sem1');
+const autheCheck = require('../strategies/json_for_staff');
+const Staff = require('./comp_std');
+const Auth = require('../strategies/json-for-std');
 
 router.post('/register', (req, res) =>{
-    //register chese mundhu ah name tho evarina person unnara ani check cheyali.. coz 2persons ki same email evvlaem kadha
-    Person.findOne({email: req.body.email})
+        Person.findOne({email: req.body.email})
         .then(person =>{
             if(person){
                 return res.status(400).json({emailerror:'person existed'});
@@ -77,15 +80,7 @@ router.post('/login', (req, res) =>{
 
 
 router.get('/prof_comp', passport.authenticate("jwt", {session: false}), (req, res) =>{
-    const token = req.cookies.jwt;
-    try{
-         const dec = jwt.decode(token, key.secret)
-        res.render('employee.ejs');
-    }    
-    catch(err){
-        res.send('Error in fetching token');
-    }
-    
+    res.render('employee.ejs')
 })
 
 router.get('/add_comp_prof', passport.authenticate("jwt", {session: false}), (req, res) =>{
@@ -136,15 +131,91 @@ router.post('/add_comp_profile', (req, res) =>{
 router.get('/view_prof', passport.authenticate('jwt', {session:true}), (req, res) =>{
     const token = req.cookies.jwt;
     const dec = jwt.decode(token, key.secret);
-    Profile.findOne({id: req.user.id})
+    Profile.findOne({user: req.user.id})
         .then(profile =>{
-            if(profile){
-                res.json(profile)
+            if(!profile){
+                res.send('uff')
             }else{
-                res.send('person dont have profile')
+              res.render('view_prof.ejs', {
+                  first_name:profile.first_name,
+                  last_name: profile.last_name,
+                  father_name: profile.father_name,
+                  gender: profile.gender,
+                  phn_no: profile.phn_no,
+                  marital_status: profile.marital_status,
+                  empID: profile.empID,
+                  dept: profile.dept,
+                  qualification: profile.qualification,
+                  experiance: profile.experiance,
+                  Address: profile.Address
+              })        
             }
         })
         .catch(err => res.send(err))
 
+})
+
+router.get('/logout', (req, res) =>{
+     const token = req.cookies.jwt;
+    const dec = jwt.decode(token, key.secret);
+    res.render('emp_loggedout.ejs');
+    res.clearCookie('jwt');
+});
+
+router.get('/checkstd', passport.authenticate('jwt', {session: false}), (req, res) =>{
+    res.render('checking_student.ejs');
+})
+
+router.post('/checking',  (req, res) =>{
+    Student.findOne({stdid: req.body.stdid})
+        .then(student =>{
+            if(student){
+                const payload1 = {
+                    id: student.id,
+                    stdid: student.stdid
+                };
+                const token = jwt.sign(
+                    payload1,
+                    key.secret2,{
+                        expiresIn:3600
+                    }
+                );
+                res.cookie('token',token, {httpOnly: true} );
+                res.redirect('/sem');
+                
+            }else{
+                res.send('student isn"t there with that id');
+            }
+        })
+        .catch(err => res.send('error in fetching data'));
+});
+
+router.get('/sem', Auth, (req, res) =>{
+    res.render('sem1.ejs');
+})
+
+router.post('/sem1', (req, res) =>{
+    const token = req.cookies.token;
+    const dec = jwt.verify(token, key.secret2);
+    Sem1.findOne({id: dec.id})
+        .then(sem1 =>{
+            if(sem1){
+                res.send('u already entered marks for this');
+
+            }else{
+                const newSem1 = new Sem1({
+                    student:dec.id,
+                    stdid: dec.stdid,
+                    c: req.body.c,
+                    java: req.body.java,
+                    dms: req.body.dms,
+                    co: req.body.co,
+                    se: req.body.se
+                });
+                newSem1.save()
+                    .then(sem1 => res.json(sem1))
+                    .catch(err => res.send('error in saving marks'));
+            }
+        })
 })
 module.exports = router;
